@@ -41,51 +41,6 @@ body {
     font-size: 1.5rem;
 }
 
-.input-group {
-    margin-bottom: 15px;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    color: var(--text-color);
-    font-size: 16px;
-}
-
-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.button-group {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: opacity 0.3s;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-.clear-btn {
-    background-color: var(--danger-color);
-}
-
 .camera-section {
     margin-bottom: 15px;
     text-align: center;
@@ -94,6 +49,18 @@ button:hover {
 .camera-btn {
     background-color: var(--primary-color);
     margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.camera-btn:hover {
+    opacity: 0.9;
 }
 
 #camera {
@@ -132,12 +99,6 @@ button:hover {
     word-break: break-all;
 }
 
-#countdown {
-    margin-top: 10px;
-    font-size: 14px;
-    color: var(--text-color);
-}
-
 @media (max-width: 480px) {
     .container {
         padding: 15px;
@@ -146,11 +107,6 @@ button:hover {
     
     .title {
         font-size: 1.2rem;
-    }
-
-    input, button {
-        padding: 10px;
-        font-size: 14px;
     }
 
     #camera {
