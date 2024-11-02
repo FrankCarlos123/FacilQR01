@@ -9,11 +9,10 @@ async function startCamera() {
     try {
         const camera = document.getElementById('camera');
         const capturedImage = document.getElementById('captured-image');
-        const canvas = document.getElementById('canvas');
         
         capturedImage.style.display = 'none';
-        canvas.style.display = 'none';
-        
+        camera.style.display = 'block';
+
         stream = await navigator.mediaDevices.getUserMedia({ 
             video: { 
                 facingMode: 'environment',
@@ -22,7 +21,7 @@ async function startCamera() {
             } 
         });
         camera.srcObject = stream;
-        
+
         const cameraBtn = document.querySelector('.camera-btn');
         cameraBtn.textContent = 'Capturar';
         cameraBtn.onclick = captureImage;
@@ -34,22 +33,19 @@ async function startCamera() {
 
 async function captureImage() {
     const camera = document.getElementById('camera');
-    const canvas = document.getElementById('canvas');
     const capturedImage = document.getElementById('captured-image');
 
-    // Configurar canvas con la imagen original
+    // Capturar la imagen en color sin procesar
+    const canvas = document.createElement('canvas');
     canvas.width = camera.videoWidth;
     canvas.height = camera.videoHeight;
     const ctx = canvas.getContext('2d');
-    
-    // Capturar la imagen en color sin procesar
     ctx.drawImage(camera, 0, 0);
 
     // Guardar la imagen en color
     capturedImage.src = canvas.toDataURL('image/jpeg', 1.0);
     capturedImage.style.display = 'block';
     camera.style.display = 'none';
-    canvas.style.display = 'none';
 
     // Detener la cámara
     if (stream) {
@@ -141,7 +137,7 @@ function generateQR() {
 }
 
 function startCountdown() {
-    let count = 30;
+    let count = 10;
     const countdownElement = document.getElementById('countdown');
     countdownElement.textContent = `Limpieza automática en ${count} segundos`;
 
