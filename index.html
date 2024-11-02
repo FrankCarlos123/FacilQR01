@@ -9,25 +9,15 @@
   <div class="container">
     <h1 class="title">Generador QR</h1>
 
-    <div class="input-group">
-      <input type="text" id="text" placeholder="Ingresa el código de barras" />
-    </div>
-
-    <div class="button-group">
-      <button class="generate-btn" onclick="generateQR()">Generar QR</button>
-      <button class="clear-btn" onclick="clearAll()">Limpiar</button>
-    </div>
-
     <div class="camera-section">
       <video id="camera" style="display: none;"></video>
       <img id="captured-image" style="display: none; max-width: 100%; border-radius: 6px; margin-bottom: 10px;" />
-      <button class="camera-btn" onclick="startCamera()">Tomar Foto</button>
+      <button class="camera-btn" onclick="captureImage()">Tomar Foto</button>
     </div>
 
     <div class="qr-container">
       <div id="qrcode" class="qr-code"></div>
       <div id="qr-text" class="qr-text"></div>
-      <div id="countdown"></div>
     </div>
   </div>
 
