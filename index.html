@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Generador QR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,7 +19,7 @@
     </div>
 
     <div class="camera-section">
-      <canvas id="canvas" style="display: none;"></canvas>
+      <video id="camera" style="display: none;"></video>
       <img id="captured-image" style="display: none; max-width: 100%; border-radius: 6px; margin-bottom: 10px;" />
       <button class="camera-btn" onclick="startCamera()">Tomar Foto</button>
     </div>
