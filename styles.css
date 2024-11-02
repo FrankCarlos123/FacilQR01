@@ -1,0 +1,155 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1E1E1E;
+    --primary-color: #2871b5;
+    --danger-color: #dc3545;
+    --text-color: #FFFFFF;
+    --border-color: #333333;
+    --qr-text-color: #ff0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-width: 400px;
+    min-height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.container {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.clear-btn {
+    background-color: var(--danger-color);
+}
+
+.camera-section {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.camera-btn {
+    background-color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+#camera {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+#captured-image {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.qr-container {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qr-code {
+    position: relative;
+    display: inline-block;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.qr-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--qr-text-color);
+    word-break: break-all;
+}
+
+#countdown {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+
+    input, button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
